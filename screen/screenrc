@@ -1,0 +1,10 @@
+attrcolor b  ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+defscrollback 5000
+termcapinfo xterm* ti@:te@
+hardstatus alwayslastline '%{= B} %H %= %{= k}%-w%{+b G}%n*%t%{-b G}%{k}%+w %= %{c}%d %D %{M}%c '
+vbell off
+startup_message off
+termcapinfo * '' 'hs:ts=\E_:fs=\E\\:ds=\E_\E\\'
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
