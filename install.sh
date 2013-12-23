@@ -73,6 +73,17 @@ function bash_install() {
   ln -s $PWD/bash/aliases $HOME/.bash_aliases
 }
 
+# Public - Install screenrc
+function screenrc_install() {
+  echo "======================================================================="
+  echo -e "\t Screen configuration"
+  echo "======================================================================="
+  if [ -L "$HOME/.screenrc" ]; then
+    rm -f $HOME/.screenrc
+  fi
+
+  ln -s $PWD/screen/screenrc $HOME/.screenrc
+}
 # Public - Helper function to install repositores
 function shell_install() {
   if [ ! -d "$HOME/bin/" ]; then
