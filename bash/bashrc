@@ -1,0 +1,45 @@
+##-------------------------------------------
+##    bashrc configuration
+##
+##  - Use Bash completion if exists
+##  - Add aliases to .bash_aliases
+##  - Automatically include rbenv
+##-------------------------------------------
+
+##-------------------------------------------
+## Use Bash completion pack for profit
+##-------------------------------------------
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+
+##-------------------------------------------
+## Some history control
+##-------------------------------------------
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+##-------------------------------------------
+## Include our aliases
+##-------------------------------------------
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+##-------------------------------------------
+## rbenv settings
+##-------------------------------------------
+if [ -d "$HOME/.rbenv/" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+##-------------------------------------------
+## Use our Powerline shell for profit
+##-------------------------------------------
+function _update_ps1() {
+  export PS1="$(~/bin/powerline-shell/powerline-shell.py $? 2> /dev/null) "
+}
+export PROMPT_COMMAND="_update_ps1"

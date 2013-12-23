@@ -1,0 +1,13 @@
+#--------------------------
+# So cool aliases
+#--------------------------
+alias ll='ls -lah'
+alias s="ssh -l root"
+
+#--------------------------
+#   Git aliases
+#--------------------------
+alias g="git"
+alias ga="git add"
+alias gs="git status"
+alias gc="git commit -S"
