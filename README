@@ -1,0 +1,5 @@
+INSTALLATION::
+
+mkdir ~/bin/
+git clone https://github.com/akrasic/termos.git
+cd termos; bash install.sh
