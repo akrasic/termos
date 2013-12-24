@@ -3,6 +3,7 @@
 #--------------------------
 alias ll='ls -lah'
 alias s="ssh -l root"
+alias bim="vim"
 
 #--------------------------
 #   Git aliases
@@ -10,6 +11,7 @@ alias s="ssh -l root"
 alias g="git"
 alias ga="git add"
 alias gs="git status"
-alias gc="git commit -S"
+alias gc="git commit"
+alias gcs="git commit -S"
 alias gb="git branch"
 alias gco="git checkout"
